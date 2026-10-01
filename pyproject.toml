@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hectorconfig-py"
+version = "0.1.10"
+description = "Python translation of the HECTOR probe configuration workflow"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "PyYAML>=6.0",
+  "matplotlib>=3.7",
+  "shapely>=2.0",
+]
+
+[project.urls]
+Repository = "https://github.com/calofost/hectorconfig_python"
+Reference-R-package = "https://github.com/calofost/hectorconfig_R"
+
+[project.optional-dependencies]
+app = ["shiny>=0.10"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+hector-config = "hectorconfig_py.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hectorconfig_py = ["data/*.yaml", "data/*.csv"]
