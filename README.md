@@ -1,5 +1,7 @@
 # hectorconfig_python
 
+Note from calofost: this package is based on code written pre-AI in R. The Python translation and adaptation, packaging and documentation were done by AI ChatGPT. I have tested what I could, but please use a healthy dose of scepticism and kindly report issues.
+
 This repository contains the Python distribution `hectorconfig-py`, imported
 as `hectorconfig_py`. It is a translation of the HECTOR probe-configuration
 workflow from the stable R package `hectorconfig` 0.1.18 in the separate
